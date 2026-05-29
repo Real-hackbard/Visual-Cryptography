@@ -24,6 +24,15 @@ In this example, the binary image has been split into two component images. Each
 
 So, when the two component images are superimposed, the original image appears. However, without the other component, a component image reveals no information about the original image; it is indistinguishable from a random pattern of ■□ / □■ pairs. Moreover, if you have one component image, you can use the shading rules above to produce a counterfeit component image that combines with it to produce any image at all.
 
+</br>
+
+### Demonstration of visual cryptography
+
+<img width="339" height="100" alt="Visual_crypto_animation_demo" src="https://github.com/user-attachments/assets/87082f8a-8471-4b14-bdd2-a8370bf32a1e" />
+
+
+
+
 
 
 
