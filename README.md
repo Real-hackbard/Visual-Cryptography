@@ -42,7 +42,7 @@ Any two transparencies printed with black rectangles, when overlaid reveals the 
 
 Every pixel from the secret image is encoded into multiple subpixels in each share image using a matrix to determine the color of the pixels. In the (2, n) case, a white pixel in the secret image is encoded using a matrix from the following set, where each row gives the subpixel pattern for one of the components:
 
-
+For instance in the (2,2) sharing case (the secret is split into 2 shares and both shares are required to decode the secret) we use complementary matrices to share a black pixel and identical matrices to share a white pixel. Stacking the shares we have all the subpixels associated with the black pixel now black while 50% of the subpixels associated with the white pixel remain white.
 
 
 
