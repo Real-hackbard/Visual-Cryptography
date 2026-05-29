@@ -52,7 +52,7 @@ When overlaid, each white pixel of the secret image is represented by three blac
 
 <img width="400" height="400" alt="Visual_cryptography_stenography svg" src="https://github.com/user-attachments/assets/92fa432c-1d64-4056-9136-7243c5ce236d" />
 
-</br>
+</br></br>
 
 Overlaying component images using two black subpixels (with letters A and B) to reveal a hidden message with three black subpixels (the letter S)
 
