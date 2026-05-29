@@ -14,7 +14,11 @@ One of the best-known techniques has been credited to Moni Naor and Adi Shamir, 
 
 Using a similar idea, transparencies can be used to implement a [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) encryption, where one transparency is a shared random pad, and another transparency acts as the ciphertext. Normally, there is an expansion of space requirement in visual cryptography. But if one of the two shares is structured recursively, the efficiency of visual cryptography can be increased to 100%
 
+</br>
 
+<img src="https://github.com/user-attachments/assets/a7a7edc6-bdfd-4721-8860-afd7858e90f2" />
+
+</br>
 
 
 
