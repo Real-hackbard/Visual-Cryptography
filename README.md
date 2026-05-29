@@ -30,7 +30,17 @@ So, when the two component images are superimposed, the original image appears. 
 
 <img width="339" height="100" alt="Visual_crypto_animation_demo" src="https://github.com/user-attachments/assets/87082f8a-8471-4b14-bdd2-a8370bf32a1e" />
 
+</br></br>
 
+Any two transparencies printed with black rectangles, when overlaid reveals the message, here, a letter A (gridlines added for clarity).
+
+</br>
+
+<img width="400" height="225" alt="Visual_cryptography_3_choose_2 svg" src="https://github.com/user-attachments/assets/b01ae91f-6902-4eec-9b68-0ea67daac01e" />
+
+</b></br>
+
+Every pixel from the secret image is encoded into multiple subpixels in each share image using a matrix to determine the color of the pixels. In the (2, n) case, a white pixel in the secret image is encoded using a matrix from the following set, where each row gives the subpixel pattern for one of the components:
 
 
 
