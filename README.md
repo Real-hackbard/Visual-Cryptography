@@ -44,6 +44,19 @@ Every pixel from the secret image is encoded into multiple subpixels in each sha
 
 For instance in the (2,2) sharing case (the secret is split into 2 shares and both shares are required to decode the secret) we use complementary matrices to share a black pixel and identical matrices to share a white pixel. Stacking the shares we have all the subpixels associated with the black pixel now black while 50% of the subpixels associated with the white pixel remain white.
 
+2×2 subpixels can also encode a binary image in each component image. For example, each white pixel of each component image could be represented by two black subpixels, while each black pixel represented by three black subpixels.
+
+When overlaid, each white pixel of the secret image is represented by three black subpixels, while each black pixel is represented by all four subpixels black. Each corresponding pixel in the component images is randomly rotated to avoid orientation leaking information about the secret image.
+
+</br>
+
+<img width="400" height="400" alt="Visual_cryptography_stenography svg" src="https://github.com/user-attachments/assets/92fa432c-1d64-4056-9136-7243c5ce236d" />
+
+</br></br>
+
+Overlaying component images using two black subpixels (with letters A and B) to reveal a hidden message with three black subpixels (the letter S)
+
+
 
 
 
