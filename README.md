@@ -63,7 +63,7 @@ The images must be painted in a 1-pixel format to achieve the distinct black-and
   bitmap.PixelFormat:= pf1bit;  // not higher
 ```
 
-Painting the Pixels
+### Painting the Pixels
 
 ```pascal
 for i:=3 to xb do
@@ -83,7 +83,8 @@ for i:=3 to xb do
     end;
 ```
 
-Merge Bitmap Picutres
+### Merge Bitmap Picutres  
+
 ```pascal
 { Here, two images are superimposed for visualization purposes. The images
   must be of equal size and set to transparent so that the overlapping
@@ -122,7 +123,7 @@ begin
 end;
 ```
 
-Moving the Picture
+### Moving the Picture
 
 ```pascal
 procedure TForm1.PaintBox1MouseDown(Sender: TObject; Button: TMouseButton;
