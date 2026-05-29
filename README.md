@@ -99,11 +99,14 @@ var
 begin
   if not (Assigned(Src1) or Assigned(Src2) or Assigned(Dest)) then Exit;
   if (Src1.Width<>Src2.Width) or (Src1.Height<>Src2.Height) then Exit;
+
   Src1.PixelFormat := pf32bit;
   Src2.PixelFormat := pf32bit;
+
   Dest.PixelFormat := pf32bit;
   Dest.Width:=Src1.Width;
   Dest.Height:=Src1.Height;
+
   s1:=Src1.ScanLine[Src1.Height-1];
   s2:=Src2.ScanLine[Src2.Height-1];
   d:=Dest.ScanLine[Dest.Height-1];
@@ -116,6 +119,7 @@ begin
     d.b:=(s1.b*nAlpha + s2.b*Alpha) Div 255;
     d.g:=(s1.g*nAlpha + s2.g*Alpha) Div 255;
     d.r:=(s1.r*nAlpha + s2.r*Alpha) Div 255;
+
     Inc(s1);
     Inc(s2);
     Inc(d);
