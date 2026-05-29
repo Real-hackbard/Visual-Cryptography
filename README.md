@@ -56,8 +56,32 @@ When overlaid, each white pixel of the secret image is represented by three blac
 
 Overlaying component images using two black subpixels (with letters A and B) to reveal a hidden message with three black subpixels (the letter S)
 
+# Code
+The images must be painted in a 1-pixel format to achieve the distinct black-and-white effect. Any higher resolution blurs the pixels and results in inconsistencies.
 
+```pascal
+  bitmap.PixelFormat:= pf1bit;  // not higher
+```
 
+Painting the Pixels
+
+```pascal
+for i:=3 to xb do
+    for j:=3 to yb do
+    begin
+      { Paint over the black pixels at X/Y with white paint, and go pixel by
+        pixel across the entire image. In this process, the pixels of both
+        images are processed simultaneously. Therefore, both images should
+        have the same aspect ratio. }
+      if bitmap.Canvas.pixels[i,j] <> clwhite then
+      begin
+        if Image1.Canvas.pixels[2*i,2*j] = clwhite then
+          Image2.canvas.draw(2*i,2*j,bl)
+        else
+          Image2.canvas.draw(2*i,2*j,br);
+      end;
+    end;
+```
 
 
 
