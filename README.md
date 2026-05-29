@@ -83,7 +83,7 @@ for i:=3 to xb do
     end;
 ```
 
-### Merge Bitmap Picutres  
+### Merge Bitmap Pictures  
 
 ```pascal
 { Here, two images are superimposed for visualization purposes. The images
