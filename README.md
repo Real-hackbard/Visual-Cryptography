@@ -83,5 +83,42 @@ for i:=3 to xb do
     end;
 ```
 
+Merge Bitmap Picutres
+```pascal
+{ Here, two images are superimposed for visualization purposes. The images
+  must be of equal size and set to transparent so that the overlapping
+  image covers the black pixels of the image beneath it, making them visible. }
+procedure MergeBmp(Src1, Src2, Dest: TBitmap; Alpha: Byte);
+type
+  TARGB = packed record b, g, r, a: Byte end;
+var
+  s1, s2, d: ^TARGB;
+  nAlpha: Byte;
+  i: Integer;
+begin
+  if not (Assigned(Src1) or Assigned(Src2) or Assigned(Dest)) then Exit;
+  if (Src1.Width<>Src2.Width) or (Src1.Height<>Src2.Height) then Exit;
+  Src1.PixelFormat := pf32bit;
+  Src2.PixelFormat := pf32bit;
+  Dest.PixelFormat := pf32bit;
+  Dest.Width:=Src1.Width;
+  Dest.Height:=Src1.Height;
+  s1:=Src1.ScanLine[Src1.Height-1];
+  s2:=Src2.ScanLine[Src2.Height-1];
+  d:=Dest.ScanLine[Dest.Height-1];
 
+  nAlpha := not Alpha;
+
+  // This ensures that the pixels possess the full color channel value.
+  for i:=1 to Dest.Width*Dest.Height do
+  begin
+    d.b:=(s1.b*nAlpha + s2.b*Alpha) Div 255;
+    d.g:=(s1.g*nAlpha + s2.g*Alpha) Div 255;
+    d.r:=(s1.r*nAlpha + s2.r*Alpha) Div 255;
+    Inc(s1);
+    Inc(s2);
+    Inc(d);
+  end;
+end;
+```
 
