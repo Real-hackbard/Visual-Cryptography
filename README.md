@@ -122,3 +122,33 @@ begin
 end;
 ```
 
+Moving the Picture
+
+```pascal
+procedure TForm1.PaintBox1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  // Determine the horizontal line of the lower image.
+  yalt := y;
+  bewegen := true;
+end;
+
+procedure TForm1.PaintBox1MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+   // Move Picture 2 in the horizontal direction.
+   if bewegen then
+   begin
+     { The lower image aligns precisely with the top edge of the first image.
+       In the event of a change, the position of the upper image must also
+       be adjusted. }
+     if yoffset+(y-yalt)<50 then
+      yoffset := 50
+     else
+      yoffset:=yoffset+(y-yalt);
+
+     yalt := y;
+     Edit1Change(Sender);
+   end;
+end;
+```
