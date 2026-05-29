@@ -10,6 +10,10 @@
 
 </br>
 
+One of the best-known techniques has been credited to Moni Naor and Adi Shamir, who developed it in 1994. They demonstrated a visual [secret sharing](https://en.wikipedia.org/wiki/Secret_sharing) scheme, where a [binary image](https://en.wikipedia.org/wiki/Binary_image) was broken up into n shares so that only someone with all n shares could decrypt the image, while any n − 1 shares revealed no information about the original image. Each share was printed on a separate transparency, and decryption was performed by overlaying the shares. When all n shares were overlaid, the original image would appear. There are several generalizations of the basic scheme including k-out-of-n visual cryptography, and using opaque sheets but illuminating them by multiple sets of identical illumination patterns under the recording of only one single-pixel detector, which exposed the image.
+
+Using a similar idea, transparencies can be used to implement a [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) encryption, where one transparency is a shared random pad, and another transparency acts as the ciphertext. Normally, there is an expansion of space requirement in visual cryptography. But if one of the two shares is structured recursively, the efficiency of visual cryptography can be increased to 100%
+
 
 
 
